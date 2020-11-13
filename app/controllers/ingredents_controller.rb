@@ -1,0 +1,2 @@
+class IngredentsController < ApplicationController
+end

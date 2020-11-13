@@ -1,0 +1,18 @@
+<div class ="container">
+
+<h1>Cocktails</h1>
+<ul> <% @cocktails.each do |cocktail| %>
+  <div class ="card" style="width: 18rem;">
+    <div class ="card-body">
+      <h5 class="card-title"><%= cocktail.name %></h5>
+      <% cocktail.doses.each do |dose| %>
+      <p> <%= dose.ingredient.name %> </p>
+      <% end %>
+      <p> <%= link_to "see more", cocktail_path(cocktail), :class => 'btn btn-primary' %></p>
+    </div>
+  </div>
+<% end %>
+</ul>
+<br>
+<p><%=link_to "add a cocktail", new_cocktail_path %></p>
+</div>
